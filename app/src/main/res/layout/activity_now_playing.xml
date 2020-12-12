@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NowPlaying"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_music_library"
+                android:layout_weight="1"
+                android:layout_margin="24dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_main_screen"
+                android:layout_weight="1"
+                android:layout_margin="24dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SONG"
+        android:textSize="64sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"/>
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ARTIST"
+        android:textSize="32sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"/>
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play/Pause"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"/>
+
+
+</LinearLayout>
