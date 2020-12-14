@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Musical Structure App</string>
-    <string name="go_to_music_library">Go to Music Library</string>
+    <string name="go_to_music_library">Music Library</string>
     <string name="create_new_playlist">Create New Playlist</string>
     <string name="select_playlist">Select Playlist</string>
-    <string name="go_to_main_screen">Go to Main Screen</string>
+    <string name="go_to_main_screen">Playlists</string>
 </resources>

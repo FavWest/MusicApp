@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button goToMusicLibrary;
     Button goToCreateNewPlaylist;
     public static final String PLAYLIST_EXTRA = "com.favwest.musicalstructureapp.mainactivity.PLAYLIST_EXTRA";
+    public static final String SONG_NAME_EXTRA = "com.favwest.musicalstructureapp.mainactivity.SONG_NAME_EXTRA";
+    public static final String ARTIST_NAME_EXTRA = "com.favwest.musicalstructureapp.mainactivity.ARTIST_NAME_EXTRA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,6 +22,7 @@ public class NowPlaying extends AppCompatActivity {
         displaySong.setText(songName);
         displayArtist.setText(artistName);
         String playlistName = intent.getStringExtra(MainActivity.PLAYLIST_EXTRA);
-        displaySong.setText(playlistName);
+        TextView displayPlaylist = findViewById(R.id.playlist);
+        displayPlaylist.setText(playlistName);
     }
 }
