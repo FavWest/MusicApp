@@ -4,35 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/go_to_music_library"
-        android:text="@string/go_to_music_library"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/go_to_create_new_playlist"
-        android:text="@string/create_new_playlist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        <Button
+            android:id="@+id/go_to_music_library"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:text="@string/go_to_music_library" />
+
+        <Button
+            android:id="@+id/go_to_create_new_playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="0"
+            android:text="New Playlist" />
+    </LinearLayout>
 
     <TextView
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/select_playlist"
-        android:textSize="16sp"
-        />
+        android:textSize="32sp" />
 
     <ListView
         android:id="@+id/playlists"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
