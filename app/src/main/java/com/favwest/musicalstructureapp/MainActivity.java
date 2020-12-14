@@ -24,10 +24,19 @@ public class MainActivity extends AppCompatActivity {
     public static final String SONG_NAME_EXTRA = "com.favwest.musicalstructureapp.mainactivity.SONG_NAME_EXTRA";
     public static final String ARTIST_NAME_EXTRA = "com.favwest.musicalstructureapp.mainactivity.ARTIST_NAME_EXTRA";
 
+    //Declare Shared Preference variables
+    private SharedPreferences mPreferences;
+    private final String sharedPrefFileKey = "com.favwest.musicalstructureapp.SHARED_PREFERENCES";
+    public final String PLAYLIST_KEY = "com.favwest.musicalstructureapp.MainActivity.PLAYLIST_KEY";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Initialize mPreferences to access Shared Preferences
+        mPreferences = getSharedPreferences(sharedPrefFileKey, MODE_PRIVATE);
 
         goToMusicLibrary = findViewById(R.id.go_to_music_library);
         goToMusicLibrary.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ArrayList<Playlist> playlists = new ArrayList<Playlist>();
-        playlists.add(new Playlist("Classic 80s", new ArrayList<>()));
+
+        //TODO: uses PLAYLIST_KEY to set the value of the one item in the Playlists ArrayList
+        playlists.add(new Playlist(mPreferences.getString(PLAYLIST_KEY, "80s"), new ArrayList<>()));
 
         PlaylistAdapter<Playlist> playlistAdapter = new PlaylistAdapter<Playlist>(this, playlists);
         ListView list = findViewById(R.id.playlists);
@@ -70,5 +81,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    /**
+     * Callback for activity pause.  Shared preferences are saved here.
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putString(PLAYLIST_KEY, "Awesome 80s");
+        preferencesEditor.apply();
     }
 }
