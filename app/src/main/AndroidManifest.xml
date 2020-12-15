@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicalStructureApp">
-        <activity android:name=".CreateNewPlaylist"
-            android:label="Create New Playlist"
-            android:parentActivityName=".MainActivity"/>
         <activity android:name=".NowPlaying"
             android:label="Now Playing"
             android:parentActivityName=".MainActivity"/>

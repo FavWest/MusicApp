@@ -57,13 +57,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        goToCreateNewPlaylist = findViewById(R.id.go_to_create_new_playlist);
-        goToCreateNewPlaylist.setOnClickListener(view -> {
-
-            Intent intent = new Intent(MainActivity.this, CreateNewPlaylist.class);
-            startActivity(intent);
-        });
-
         //TODO this checks whether there is a value connected to PLAYLIST_KEY in Shared Preferences.
         // Is there a better way?
         //Check to see if there is an ArrayList<Playlist> connected to the PLAYLIST_KEY in Shared Preferences
