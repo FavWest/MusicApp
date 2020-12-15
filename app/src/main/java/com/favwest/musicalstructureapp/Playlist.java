@@ -13,4 +13,11 @@ public class Playlist {
 
     public String toString(){return title;}
 
+    public ArrayList<Song> getSongs() {
+        return songs;
+    }
+
+    public void addSong(Song song){
+        songs.add(song);
+    }
 }
