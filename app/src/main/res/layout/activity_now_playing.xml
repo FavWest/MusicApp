@@ -3,15 +3,12 @@
 <!--A very long song title or artist name can move buttons off the screen,
 especially if the user has their font size set large. Scrollview keeps these
 buttons accessible-->
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".NowPlaying"
     android:orientation="vertical"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-   >
+    android:layout_width="match_parent">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -24,6 +21,7 @@ buttons accessible-->
         android:orientation="horizontal">
 
             <Button
+                android:id="@+id/go_to_music_library"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/go_to_music_library"
@@ -31,6 +29,7 @@ buttons accessible-->
                 android:layout_margin="24dp"/>
 
             <Button
+                android:id="@+id/go_to_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/go_to_main_screen"
@@ -40,24 +39,33 @@ buttons accessible-->
     </LinearLayout>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing"
+        android:textAllCaps="true"
+        android:textSize="40sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:textAlignment="center"/>
+
+    <TextView
         android:id="@+id/playlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="PLAYLIST"
         android:textSize="24sp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"/>
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/song"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="SONG"
+        android:textColor="@color/purple_500"
         android:textSize="40sp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="64dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
         android:textAlignment="center"/>
 
     <TextView
@@ -65,31 +73,28 @@ buttons accessible-->
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="ARTIST"
+        android:textColor="@color/purple_500"
         android:textSize="24sp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:textAlignment="center"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"/>
+        android:layout_marginTop="16dp"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play/Pause"
+        android:text="@string/pause"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
 
     <Button
+        android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Next"/>
+        android:text="@string/next"
+        android:visibility="gone" />
 
 
 </LinearLayout>

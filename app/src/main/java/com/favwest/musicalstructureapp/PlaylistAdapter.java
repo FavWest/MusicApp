@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PlaylistAdapter<S> extends ArrayAdapter<Playlist> {
+public class PlaylistAdapter extends ArrayAdapter<Playlist> {
 
     public PlaylistAdapter(Activity context, ArrayList<Playlist> playlists) {
         super(context, 0, playlists);
