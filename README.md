@@ -15,8 +15,6 @@ Uses a dependency, GSON, which was not introduced in the class and which I resea
 _Allows the user to move between several screens containing different stored "song lists,"
 to select songs from a listview to go to a "now playing" page for that song, and to skip to the next song in that playlist.
 
-## Known Bugs
-* 
 ## License
 MIT
 Copyright (c) 2021 Victoria West
