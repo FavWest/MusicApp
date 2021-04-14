@@ -11,7 +11,7 @@ _Independently completed assignment for an online course. Demonstrates use of ba
 
 ## Description
 _Allows the user to move between several screens containing different stored "song lists,"
-to select songs from a listview to go to a "now playing" page for that song, and to skip to the next song in that playlist.
+to select songs from a listview to go to a "now playing" page for that song, and to skip to the next song in that playlist._
 
 ## License
 MIT
