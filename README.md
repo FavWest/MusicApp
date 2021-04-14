@@ -1,8 +1,6 @@
 # Music App
 
-#### Independently completed assignment for an online course.
-Demonstrates use of basic Android and Java tools including SharedPreferences, classes and class adapters, click listeners, listviews, and intents.
-Uses a dependency, GSON, which was not introduced in the class and which I researched and added to the project.
+_Independently completed assignment for an online course. Demonstrates use of basic Android and Java tools including SharedPreferences, classes and class adapters, click listeners, listviews, and intents. Uses a dependency, GSON, which was not introduced in the class and which I researched and added to the project._
 
 #### By _**Victoria West**_
 
